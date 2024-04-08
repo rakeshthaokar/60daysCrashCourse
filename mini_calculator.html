@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+</head>
+<body>
+    <div>
+        <input id="input1" type="number" placeholder="enter 1st number">
+        <input id="input2" type="number" placeholder="enter 2nd number">
+        <br><br>
+        <button id="add">Add</button>&nbsp;&nbsp;
+        <button id="substract">Subtract</button>&nbsp;&nbsp;
+        <button id="multiply">Multiply</button>&nbsp;&nbsp;
+        <button id="divide">Divide</button>
+    </div>
+</body>
+<script>
+    let inp1 = document.querySelector("#input1")
+    let inp2 = document.querySelector("#input2")
+    let add = document.querySelector("#add")
+    let sub = document.querySelector("#substract")
+    let mul = document.querySelector("#multiply")
+    let divi = document.querySelector("#divide")
+
+    add.addEventListener('click', Addition)
+    sub.addEventListener('click', Substraction)
+    mul.addEventListener('click', Multiplication)
+    divi.addEventListener('click', Division)
+    function Addition(){
+        let output1=(Number(inp1.value) + Number(inp2.value))
+        alert(output1)
+    }
+    function Substraction(){
+        let output2=(Number(inp1.value) - Number(inp2.value))
+        alert(output2)
+    }
+    function Multiplication(){
+        let output3=(Number(inp1.value) * Number(inp2.value))
+        alert(output3)
+    }
+    function Division(){
+        let output4=(Number(inp1.value) / Number(inp2.value))
+        alert(output4)
+    }
+
+</script>
+</html>
